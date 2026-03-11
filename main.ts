@@ -9,6 +9,10 @@ let red = DigitalPin.P0
 let green = DigitalPin.P1
 let blue = DigitalPin.P2
 
+basic.clearScreen()
+pins.digitalWritePin(DigitalPin.P16, 0)
+basic.showIcon(IconNames.Happy)
+
 input.onButtonPressed(Button.A, function () {
 
     // red
@@ -23,37 +27,37 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(blue, 0)
     basic.pause(1000)
 
-    // Blue
+    // blue
     pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 1)
     basic.pause(1000)
 
-    // Yellow
+    // yellow
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 0)
     basic.pause(1000)
 
-    // Cyan
+    // cyan
     pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
     basic.pause(1000)
 
-    // Magenta
+    // magenta
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 1)
     basic.pause(1000)
 
-    // White
+    // white
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
     basic.pause(1000)
 
-    // Turn off LED
+    // off
     pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 0)
