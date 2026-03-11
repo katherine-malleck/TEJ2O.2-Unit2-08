@@ -5,9 +5,9 @@
  * This program will change colours
 */
 
-let red = DigitalPin.P0
-let green = DigitalPin.P1
-let blue = DigitalPin.P2
+let red = DigitalPin.P14
+let green = DigitalPin.P15
+let blue = DigitalPin.P16
 
 basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P16, 0)
@@ -17,45 +17,55 @@ input.onButtonPressed(Button.A, function () {
 
     // red
     pins.digitalWritePin(red, 1)
-    pins.digitalWritePin(green, 0)
-    pins.digitalWritePin(blue, 0)
-    basic.pause(1000)
+    basic.showString('red')
+    pins.digitalWritePin(red, 0)
+    basic.clearScreen()
 
     // green
-    pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 1)
-    pins.digitalWritePin(blue, 0)
-    basic.pause(1000)
+    basic.showString('green')
+    pins.digitalWritePin(green, 0)
+    basic.clearScreen()
 
     // blue
-    pins.digitalWritePin(red, 0)
-    pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 1)
-    basic.pause(1000)
+    basic.showString('blue')
+    pins.digitalWritePin(blue, 0)
+    basic.clearScreen()
 
     // yellow
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
-    pins.digitalWritePin(blue, 0)
-    basic.pause(1000)
+    basic.showString('yellow')
+    pins.digitalWritePin(red, 0)
+    pins.digitalWritePin(red, 0)
+    basic.clearScreen()
 
     // cyan
-    pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
-    basic.pause(1000)
+    basic.showString('cyan')
+    pins.digitalWritePin(green, 0)
+    pins.digitalWritePin(blue, 0)
+    basic.clearScreen()
 
     // magenta
     pins.digitalWritePin(red, 1)
-    pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 1)
-    basic.pause(1000)
+    basic.showString('magenta')
+    pins.digitalWritePin(red, 0)
+    pins.digitalWritePin(blue, 0)
+    basic.clearScreen()
 
     // white
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
-    basic.pause(1000)
+    basic.showString('white')
+    pins.digitalWritePin(red, 1)
+    pins.digitalWritePin(green, 1)
+    pins.digitalWritePin(blue, 1)
+    basic.clearScreen()
 
     // off
     pins.digitalWritePin(red, 0)
