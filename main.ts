@@ -5,9 +5,9 @@
  * This program will change colours
 */
 
-let red = DigitalPin.P14
-let green = DigitalPin.P15
-let blue = DigitalPin.P16
+const red = DigitalPin.P14
+const green = DigitalPin.P15
+const blue = DigitalPin.P16
 
 basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P16, 0)
