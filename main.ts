@@ -5,35 +5,37 @@
  * This program will change colours
 */
 
+// setting up variables
 const red = DigitalPin.P14
 const green = DigitalPin.P15
 const blue = DigitalPin.P16
 
+//setting up the code
 basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P16, 0)
 basic.showIcon(IconNames.Happy)
-
+//press button
 input.onButtonPressed(Button.A, function () {
-
-    // red
+    basic.showIcon(IconNames.Yes)
+    // turn on red
     pins.digitalWritePin(red, 1)
     basic.showString('red')
     pins.digitalWritePin(red, 0)
     basic.clearScreen()
 
-    // green
+    // turn on green
     pins.digitalWritePin(green, 1)
     basic.showString('green')
     pins.digitalWritePin(green, 0)
     basic.clearScreen()
 
-    // blue
+    // turn on blue
     pins.digitalWritePin(blue, 1)
     basic.showString('blue')
     pins.digitalWritePin(blue, 0)
     basic.clearScreen()
 
-    // yellow
+    // turn on yellow
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
     basic.showString('yellow')
@@ -41,7 +43,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(red, 0)
     basic.clearScreen()
 
-    // cyan
+    // turn on cyan
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
     basic.showString('cyan')
@@ -49,7 +51,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(blue, 0)
     basic.clearScreen()
 
-    // magenta
+    // turn on magenta
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(blue, 1)
     basic.showString('magenta')
@@ -57,7 +59,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(blue, 0)
     basic.clearScreen()
 
-    // white
+    // turn on white
     pins.digitalWritePin(red, 1)
     pins.digitalWritePin(green, 1)
     pins.digitalWritePin(blue, 1)
@@ -67,8 +69,11 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(blue, 1)
     basic.clearScreen()
 
-    // off
+    // turn off
     pins.digitalWritePin(red, 0)
     pins.digitalWritePin(green, 0)
     pins.digitalWritePin(blue, 0)
+    basic.showString('no color')
+    basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
 })
